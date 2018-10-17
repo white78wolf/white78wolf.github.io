@@ -38,9 +38,26 @@ body {
 }
 
 .breadcrumb {
-    background-color: #fbfbfb;    
+    background-color: #fbfbfb;
     margin: -3px 0 -1em 0;
 }
+
+/**************************************************
+********************* TEST ***********************/
+.container.container-fluid .jumbotron {
+    padding: 30px 30px 30px 40px;
+    margin-bottom: 1em;
+}
+
+.jumbotron span {
+    margin-left: 1em;
+}
+
+.main .jumbotron p span+a.btn.btn-info.btn-lg {
+    float: right;
+}
+/******************** TEST ***********************
+*************************************************/
 
 .main .skills {
     margin-left: 1em;
@@ -57,7 +74,7 @@ body {
     text-align: justify;
     text-overflow: ellipsis;
     min-height: 9em;
-    /*word-break:break-all;*/    
+    /*word-break:break-all;*/
 }
 
 .clr {
@@ -90,3 +107,28 @@ footer a {
 .icon-email {
     font-size: 105%;
 }
+
+/**************************************************
+********************* TEST ***********************/
+@media screen and (max-width: 960px) {
+   .main .jumbotron p span {
+       font-size: 0.8em;
+       margin-left: 0;
+   }   
+}
+
+@media screen and (max-width: 768px) {
+    .main .jumbotron p span {
+        font-size: 0.7em;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .main .jumbotron p span {
+        font-size: 0.5em;
+        margin-left: 0;
+    }
+}
+/******************** TEST ***********************
+*************************************************/
