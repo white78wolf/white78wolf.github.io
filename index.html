@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Портфолио начинающего веб-разработчика</title>
+    <title>Портфолио веб-разработчика</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/fontello.css">
@@ -16,52 +16,37 @@
 <body>
 
     <div class="container container-fluid">
-
         <nav class="navbar navbar-default">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#" target="_self" title="Вы на главной странице">
-                    <img alt="Brand" src="img/logo.svg" width="32" height="32">
-                </a>
-            </div>
-            <p class="navbar-text navbar-right">Работы
-                <a href="about_me.html" class="navbar-link">Андрея Цепкова</a>
-            </p>
+            <div class="container-fluid" style="padding-right: 0;">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" target="_self" title="Вы на главной странице">
+                        <img alt="Brand" src="img/logo.svg" width="40" height="40">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" class="active">Работы</a></li>
+                        <li><a href="education.html">Образование</a></li>
+                        <li><a href="skills.html">Навыки</a></li>
+                        <li><a href="about_me.html" class="navbar-link">Обо мне</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
         </nav>
 
-        <ol class="breadcrumb">
-            <li class="active">
-                <span class="icon-home"></span>
-            </li>
-            <li>
-                <a href="education.html">Образование</a>
-            </li>
-            <li>
-                <a href="skills.html">Навыки</a>
-            </li>
-        </ol>
-
         <div class="main">
-            <h1>Мои работы:</h1>
-            <div class="row">
-                    <div class="col-sm-6 col-md-4">
-                            <div class="thumbnail">
-                                <a href="https://github.com/white78wolf/GameStore" title="Интернет-магазин"
-                                    onclick="return !window.open(this.href)">
-                                    <img src="img/game_store.jpg" alt="Internet store">
-                                </a>
-                                <div class="caption">
-                                    <h3>Интернет-магазин</h3>
-                                    <p>Интернет-магазин с&nbsp;использованием ASP.NET MVC5 + Razor и&nbsp;Entity Framework, для инъекции зависимостей 
-                                            был применён Ninject. 
-                                            Есть мобильная версия, админ-панель и&nbsp;база данных. Имеются юнит-тесты.
-                                    </p>
-                                    <p>
-                                        <a href="https://github.com/white78wolf/GameStore" class="btn btn-primary"
-                                            role="button" onclick="return !window.open(this.href)">Посмотреть</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
+            <h2 style="margin-top:0;">Мои работы:</h2>
+            <div class="row">                
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
                         <a href="https://github.com/white78wolf/drinksVendorMachine" title="Автомат по продаже напитков"
@@ -72,7 +57,7 @@
                             <h3>Веб-приложение</h3>
                             <p>Тестовое задание на&nbsp;знание технологии ASP.NET MVC.
                                 Включает в&nbsp;себя авторизацию в&nbsp;админ-панели и&nbsp;работу с&nbsp;базой данных.
-                                Веб-приложение имитирует работу торгового автомата по&nbsp;продаже напитков. 
+                                Веб-приложение имитирует работу торгового автомата по&nbsp;продаже напитков.
                             </p>
                             <p>
                                 <a href="https://github.com/white78wolf/drinksVendorMachine" class="btn btn-primary"
@@ -81,23 +66,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="https://github.com/white78wolf/cryptomachine" title="Шифровальное приложение" onclick="return !window.open(this.href)">
-                            <img src="img/enigma.jpg" alt="Encrypting Application">
-                        </a>
-                        <div class="caption">
-                            <h3>Шифровальщик</h3>
-                            <p>У&nbsp;замечательного преподавателя Сергея Камянецкого научился шифровать тексты,
-                                используя нехитрый алгоритм.
-                                Приложение создано с&nbsp;применением Windows Forms.</p>
-                            <p>
-                                <a href="https://github.com/white78wolf/cryptomachine" class="btn btn-primary" role="button"
-                                    onclick="return !window.open(this.href)">Посмотреть</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>                
+                
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
                         <a href="http://weatherbot.tzepkov.tk/" title="Погодный бот на C#" onclick="return !window.open(this.href)">
@@ -105,100 +74,16 @@
                         </a>
                         <div class="caption">
                             <h3>Погодный бот</h3>
-                            <p>Написал бота для Телеграма, сообщающего погоду с&nbsp;сайта
+                            <p>Бот для Телеграма, сообщающий погоду с&nbsp;сайта
                                 <a href="http://www.eurometeo.ru/" onclick="return !window.open(this.href)">www.eurometeo.ru</a>.
-                                Пока что получится только показать исходный код.</p>
+                            </p>
                             <p>
                                 <a href="http://weatherbot.tzepkov.tk/" class="btn btn-primary" role="button" onclick="return !window.open(this.href)">Посмотреть</a>
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="http://renome.tzepkov.tk/" title="Проверьте своих бизнес-партнёров" onclick="return !window.open(this.href)">
-                            <img src="img/search.jpg" alt="Landing page">
-                        </a>
-                        <div class="caption">
-                            <h3>Быстрый лендинг</h3>
-                            <p>Тестовое задание на&nbsp;тему &laquo;лендинг на&nbsp;скорую руку&raquo; с&nbsp;помощью
-                                bootstrap&rsquo;а. Без полировки не&nbsp;обошлось, адаптивность и&nbsp;аккуратность
-                                потребовали внимания, терпения и чуть больше времени. </p>
-                            <p>
-                                <a href="http://renome.tzepkov.tk/" class="btn btn-primary" role="button" onclick="return !window.open(this.href)">Посмотреть</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="http://audiotechnica.tzepkov.tk/" title="Аудиотехника Онлайн" onclick="return !window.open(this.href)">
-                            <img src="img/audiotechnica.jpg" alt="Audiotechnica Online">
-                        </a>
-                        <div class="caption">
-                            <h3>Интернет-магазин</h3>
-                            <p>Проходили вводный курс в&nbsp;html/css под руководством А.&nbsp;Кадочникова, делали
-                                интернет-магазин
-                                кто чего. Идею об&nbsp;аудиотехнике снял буквально с&nbsp;головы. Применил
-                                кроссбраузерность
-                                для IE&nbsp;7-8.</p>
-                            <p>
-                                <a href="http://audiotechnica.tzepkov.tk/" class="btn btn-primary" role="button"
-                                    onclick="return !window.open(this.href)">Посмотреть</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="http://fudi.tzepkov.tk/" title="Лендинг по psd-макету" onclick="return !window.open(this.href)">
-                            <img src="img/fudi.jpg" alt="Fudi web-app">
-                        </a>
-                        <div class="caption">
-                            <h3>Landing page</h3>
-                            <p>Наткнулся на&nbsp;вебинар по&nbsp;вёрстке лендинга с&nbsp;использованием Adobe Assets
-                                и&nbsp;LESS.
-                                Понравилось работать с&nbsp;препроцессорами.</p>
-                            <p>
-                                <a href="http://fudi.tzepkov.tk/" class="btn btn-primary" role="button" onclick="return !window.open(this.href)">Посмотреть</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="http://interior.tzepkov.tk/index.html" title="Интернет-магазин мебели" onclick="return !window.open(this.href)">
-                            <img src="img/interior.jpg" alt="Interior web-shop">
-                        </a>
-                        <div class="caption">
-                            <h3>Интернет-магазин</h3>
-                            <p>Было задание сверстать шапку сайта по&nbsp;psd-макету. Не&nbsp;удержался и&nbsp;сверстал
-                                все
-                                страницы из&nbsp;доступных макетов. Использовал Avocode, Photoshop
-                                CC&nbsp;17&nbsp;и&nbsp;PerfectPixel.</p>
-                            <p>
-                                <a href="http://interior.tzepkov.tk/index.html" class="btn btn-primary" role="button"
-                                    onclick="return !window.open(this.href)">Посмотреть</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="http://student.tzepkov.tk/" title="Персональная страница с приложениями" onclick="return !window.open(this.href)">
-                            <img src="img/student.jpg" alt="Личный сайт студента GB">
-                        </a>
-                        <div class="caption">
-                            <h3>Личная страница</h3>
-                            <p>При изучении основ программирования создал страничку с&nbsp;загадками и&nbsp;парой
-                                простых игрушек
-                                на&nbsp;Javascript. Увлёкся тестированием и&nbsp;доводкой функционала.</p>
-                            <p>
-                                <a href="http://student.tzepkov.tk/" class="btn btn-primary" role="button" onclick="return !window.open(this.href)">Посмотреть</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                
                 <div class="col-sm-6 col-md-4">
                     <div class="thumbnail">
                         <a href="http://todolist.tzepkov.tk/index.html" title="Браузерный ежедневник" onclick="return !window.open(this.href)">
@@ -206,56 +91,15 @@
                         </a>
                         <div class="caption">
                             <h3>To do list</h3>
-                            <p>Было интересно создать to&nbsp;do&nbsp;list для браузера на&nbsp;javascript. Пришлось
-                                хорошенько
-                                &laquo;поработать напильником&raquo;, прежде чем результат стал казаться приемлемым.
-                                Тестирование&nbsp;&mdash;
-                                прекрасная вещь.</p>
+                            <p>To&nbsp;do&nbsp;list на&nbsp;javascript для просмотра в&nbsp;браузере.</p>
                             <p>
                                 <a href="http://todolist.tzepkov.tk/index.html" class="btn btn-primary" role="button"
                                     onclick="return !window.open(this.href)">Посмотреть</a>
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="http://resume.tzepkov.tk" title="Ранние работы" onclick="return !window.open(this.href)">
-                            <img src="img/first_cv.jpg" alt="Ранние работы">
-                        </a>
-                        <div class="caption">
-                            <h3>Самое начало</h3>
-                            <p>После унылого ковыряния в&nbsp;Питоне и&nbsp;более-менее пристойной таблицы умножения,
-                                запакованной
-                                в&nbsp;exe-файл, в&nbsp;руки попалась книга Н.&nbsp;Робин про HTML/CSS. Дело пошло
-                                бодрее
-                                и&nbsp;веселее.
-                            </p>
-                            <p>
-                                <a href="http://resume.tzepkov.tk" class="btn btn-primary" role="button" onclick="return !window.open(this.href)">Посмотреть</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4">
-                    <div class="thumbnail">
-                        <a href="http://multiplytable.tzepkov.tk/" title="Таблица умножения" onclick="return !window.open(this.href)">
-                            <img src="img/multiplication.jpg" alt="Таблица умножения">
-                        </a>
-                        <div class="caption">
-                            <h3>Поделка на JS</h3>
-                            <p>Решил сделать что-то полезное&nbsp;&mdash; племянник как раз пошёл в&nbsp;школу.
-                                Немудрящее решение
-                                на&nbsp;Питоне перенёс на&nbsp;javascript и&nbsp;оформил в&nbsp;html/css.</p>
-                            <p>
-                                <a href="http://multiplytable.tzepkov.tk/" class="btn btn-primary" role="button"
-                                    onclick="return !window.open(this.href)">Посмотреть</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                </div>                
             </div>
-
         </div>
 
         <div class="clr"></div>

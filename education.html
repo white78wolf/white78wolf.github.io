@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Портфолио начинающего веб-разработчика</title>
+    <title>Портфолио веб-разработчика</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/fontello.css">
@@ -18,60 +18,55 @@
     <div class="container container-fluid">
 
         <nav class="navbar navbar-default">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="index.html">
-                    <img alt="Brand" src="img/logo.svg" width="32" height="32">
-                </a>
-            </div>
-            <p class="navbar-text navbar-right">
-                <a href="about_me.html" class="navbar-link">Мои</a> сертификаты
-            </p>
+            <div class="container-fluid" style="padding-right: 0;">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html" target="_self" title="На главную">
+                        <img alt="Brand" src="img/logo.svg" width="40" height="40">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="index.html" style="font-style:unset;">Работы</a></li>
+                        <li><a href="#" class="active">Образование</a></li>
+                        <li><a href="skills.html">Навыки</a></li>
+                        <li><a href="about_me.html" class="navbar-link">Обо мне</a></li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
         </nav>
 
-        <ol class="breadcrumb">
-            <li>
-                <a href="index.html" title="На главную">
-                    <span class="icon-home"></span>
-                </a>
-            </li>
-            <li class="active">
-                Образование
-            </li>
-            <li>
-                <a href="skills.html">Навыки</a>
-            </li>
-        </ol>
-
         <div class="main">
-            <h1>Учился в:</h1>
-            <div class="jumbotron">
-                <p>
-                    <img src="img/geekbrains.png" alt="Лого GeekBrains" height="50" title="GeekBrains">
-                    <span><a href="https://geekbrains.ru/" onclick="return !window.open(this.href)" title="Школа программирования GeekBrains"><b>ШП
-                                GeekBrains</b></a> при Mail.ru Group, г. Москва.</span>
-                    <a class="btn btn-info btn-lg" href="https://geekbrains.ru/users/2190604?tab=courses-and-certificates#courses-and-certificates"
-                        role="button" onclick="return !window.open(this.href)" title="Профиль студента GeekBrains">
-                        Мой профиль
-                    </a>
-                </p>
+            <h2>Учился в:</h2>            
 
-                <p>
-                    <img src="img/gerb.png" alt="Герб омского политеха" height="50" title="ОмГТУ">
-                    <span><a href="https://www.omgtu.ru/" onclick="return !window.open(this.href)" title="Омский Государственный Технический Университет"><b>ОмГТУ</b></a>
-                        - ПГФ, кафедра ТПП, инженер-технолог.</span>
-                    <a class="btn btn-info btn-lg" style="width: 8.2em;" href="img/sertificates/diplom.jpg" role="button"
-                        onclick="return !window.open(this.href)" title="Посмотреть диплом">Диплом</a>
-                </p>
-            </div>
+            <p style="font-size: 1.5em;">
+                <img src="img/gerb.png" alt="Герб омского политеха" height="50" title="ОмГТУ">
+                <span id="diploma_link">
+                    <a href="https://www.omgtu.ru/" onclick="return !window.open(this.href)" title="Омский Государственный Технический Университет"><b>ОмГТУ</b></a>
+                    - ПГФ, кафедра ТПП, <a href="img/sertificates/diplom.jpg" onclick="return !window.open(this.href)">инженер-технолог
+                    </a>.
+                </span>
+            </p>
 
-            <h2>Сертификаты и тесты:</h2>
+            <div class="clr"></div>
+
+            <h3>Сертификаты и тесты:</h3>
             <div class="row">
                 <div class="col-xs-6 col-md-2">
                     <a href="img/sertificates/sert_html.jpg" class="thumbnail" onclick="return !window.open(this.href)"
                         title="HTML/CSS. Введение в веб-разработку">
                         <img src="img/thumbnails/sert_html.jpg" alt="Золотой сертификат по HTML">
                     </a>
-                </div>                
+                </div>
 
                 <div class="col-xs-6 col-md-2">
                     <a href="img/sertificates/test_c_sharp.jpg" class="thumbnail" onclick="return !window.open(this.href)"

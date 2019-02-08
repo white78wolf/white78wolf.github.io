@@ -26,20 +26,52 @@ body {
 .navbar {
     margin-bottom: 0;
     border: none;
+    background-color: #fff;
+    padding-right: 0;
 }
 
 .navbar-header .navbar-brand img {
     margin-top: -0.4em;
 }
 
-.navbar-right {
-    margin-left: 2em;
-    margin-right: 2em;
+.navbar-header .navbar-brand {
+    padding-left: 0;
 }
 
-.breadcrumb {
-    background-color: #fbfbfb;
-    margin: -3px 0 -1em 0;
+.navbar-right {
+    margin-left: 2em;
+    margin-right: 0;
+}
+
+.navbar-right .navbar-link {
+    padding-right: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+    font-size: 1.7em;
+    color: #337ab7;
+    /*font-weight: 700;*/
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #337ab7;
+    font-weight: 700;
+}
+
+.navbar-default .navbar-nav>li>a.active {
+    font-weight: 700;;
+}
+
+.navbar-collapse {
+    padding-right: 0;
+}
+
+#diploma_link {
+    margin-left: 3%;    
+}
+
+#diploma_link a:hover {
+    text-decoration: none;
 }
 
 /**************************************************
