@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Список дел</title>
+    <link rel="stylesheet" href="css/material-icons.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+</head>
+
+<body>
+    <div id="root">
+        <div class="container">
+            <h3>Добавить дело</h3>
+            <hr>
+            <input id="new-task" type="text" placeholder="Мне нужно сделать...">
+            <!-- maxlength="33" -->
+            <button id="add">Добавить</button>
+            <h3>Список дел</h3>
+            <hr>
+            <ul id="unfinished-tasks">
+            </ul>
+
+            <h3>Завершённые дела</h3>
+            <hr>
+            <ul id="finished-tasks"></ul>
+
+        </div>
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
