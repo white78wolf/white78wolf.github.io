@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Telegram Bot - source code</title>
+	<style>
+		h3 {
+			font-family: sans-serif;
+		}
+	</style>
 </head>
 
 <body>
+	<h3>Telegram bot displaying a weather forecast</h3>
     <pre>
             using System;
             using System.Collections.Generic;
@@ -29,10 +35,11 @@
                         string messageText = "";
                         string first_name = "";
                         string token = "token"; // bot's token
-                        WebClient webClient = new WebClient();
                         string startUrl = String.Format("https://api.telegram.org/bot{0}", token);
             
-                        while (true)
+                        WebClient webClient = new WebClient();                        
+            
+                        while (true) // checking for new messages and responding invoking GetWeather()
                         {
                             string url = String.Format("{0}/getUpdates?offset={1}", startUrl, update_id + 1);
                             string response = webClient.DownloadString(url);
@@ -46,14 +53,17 @@
                                     first_name = msg["message"]["from"]["first_name"].ToString();
                                     messageFromId = msg["message"]["from"]["id"].ToString();
                                     messageText = msg["message"]["text"].ToString();
+            
                                     Console.WriteLine(String.Format("{0} {1} {2}", first_name, messageFromId, messageText));
+            
                                     messageText = GetWeather(messageText);
+            
                                     url = String.Format("{0}/sendMessage?chat_id={1}&text={2}", startUrl, messageFromId, messageText);
                                     webClient.DownloadString(url);
                                 }
                                 catch { }
                             }
-                            Thread.Sleep(250);
+                            Thread.Sleep(250); // calling Telegram 4 times per second
                         }
                     }
             
@@ -61,25 +71,26 @@
                     {
                         string[] yearMonths = new string[12]
                         {"января", "февраля", "марта", "апреля", "мая", "июня", 
-                            "июля", "августа", "сентября", "октября", "ноября", "декабря"};
+                            "июля", "августа", "сентября", "октября", "ноября", "декабря"}; // months' names will be displayed as string type
             
-                        string text = string.Empty;
-            
-                        Dictionary<string, Tuple<string, string>> cities = new Dictionary<string, Tuple<string, string>>();
-                        cities.Add("/omsk", new Tuple<string, string>("Погода в Омске\n\n", @"http://www.eurometeo.ru/russia/omskaya-oblast/omsk/export/xml/data/"));
-                        cities.Add("/nsk", new Tuple<string, string>("Погода в Новосибирске\n\n", @"http://www.eurometeo.ru/russia/novosibirskaya-oblast/novosibirsk/export/xml/data/"));
-                        cities.Add("/hmao", new Tuple<string, string>("Погода в Ханты-Мансийске\n\n", @"http://www.eurometeo.ru/russia/hantyi-mansiyskiy/hantyi-mansiysk/export/xml/data/"));
-                        cities.Add("/noyab", new Tuple<string, string>("Погода в Ноябрьске\n\n", @"http://www.eurometeo.ru/russia/yamalo-neneckiy-avtonomnyiy-okrug/noyabrsk/export/xml/data/"));
-                        cities.Add("/sevas", new Tuple<string, string>("Погода в Севастополе\n\n", @"http://www.eurometeo.ru/russia/sevastopol/export/xml/data/"));
+                        string text = string.Empty; // message about weather for sending it to chat
+                        
+                        Dictionary&lt;string, Tuple&lt;string, string>> cities = new Dictionary&lt;string, Tuple&lt;string, string>>(); // if we want not to use "if, if, if..."
+                        cities.Add("/omsk", new Tuple&lt;string, string>("Погода в Омске\n\n", @"http://www.eurometeo.ru/russia/omskaya-oblast/omsk/export/xml/data/"));
+                        cities.Add("/nsk", new Tuple&lt;string, string>("Погода в Новосибирске\n\n", @"http://www.eurometeo.ru/russia/novosibirskaya-oblast/novosibirsk/export/xml/data/"));
+                        cities.Add("/tobol", new Tuple&lt;string, string>("Погода в Тобольске\n\n", @"http://www.eurometeo.ru/russia/tumenskaya-oblast/tobolsk/export/xml/data/"));
+                        cities.Add("/hmao", new Tuple&lt;string, string>("Погода в Ханты-Мансийске\n\n", @"http://www.eurometeo.ru/russia/hantyi-mansiyskiy/hantyi-mansiysk/export/xml/data/"));
+                        cities.Add("/noyab", new Tuple&lt;string, string>("Погода в Ноябрьске\n\n", @"http://www.eurometeo.ru/russia/yamalo-neneckiy-avtonomnyiy-okrug/noyabrsk/export/xml/data/"));
+                        cities.Add("/sevas", new Tuple&lt;string, string>("Погода в Севастополе\n\n", @"http://www.eurometeo.ru/russia/sevastopol/export/xml/data/"));                        
             
                         if (cities.Keys.Contains(city))
                         {
-                            foreach (var gorod in cities)
+                            foreach (var town in cities)
                             {
-                                if (city == gorod.Key)
+                                if (city == town.Key)
                                 {
-                                    text += gorod.Value.Item1;
-                                    city = gorod.Value.Item2;
+                                    text += town.Value.Item1;
+                                    city = town.Value.Item2;
                                     break;
                                 }
                             }
@@ -87,7 +98,7 @@
                         else
                         {
                             return "Вы можете узнать погоду на завтра в Омске,\n/omsk\n" +
-                            "в Ханты-Мансийске,\n/hmao\nв Ноябрьске,\n/noyab\nв Севастополе\n/sevas\n" +
+                            "в Ханты-Мансийске,\n/hmao\nв Тобольске,\n/tobol\nв Ноябрьске,\n/noyab\nв Севастополе\n/sevas\n" +
                             "и в Новосибирске.\n/nsk\n";
                         }           
             
@@ -99,7 +110,7 @@
             
                         int step = 0;
             
-                        foreach (var item in xmlColItem.Skip(4).Take(8))
+                        foreach (var item in xmlColItem.Skip(4).Take(8)) // skipping today's weather data, getting information about tomorrow
                         {
                             string[] dayOfYear = item.Element("datetime").Value.Substring(0, 10).Split('-');
                             string date = String.Format("{0} {1} {2} года", dayOfYear[2].TrimStart('0'), yearMonths[Convert.ToInt32(dayOfYear[1]) - 1], dayOfYear[0]);
@@ -119,8 +130,7 @@
                         return text;
                     }
                 }
-            }
-                    
+            }                 
     </pre>
 </body>
 
