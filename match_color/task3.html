@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3</title>
+    <style>        
+        .square {
+            width: 3em;
+            height: 3em;
+            outline: 1px solid #ccc;
+            background-color: #fff;
+        }
+        #startButton {
+            float: left;
+            margin: 1em;
+        }
+        #displayTime {
+            margin-top: 1em;
+        }
+    </style>    
+</head>
+
+<body>
+    <div id="playfield">
+        <table id="gamefield">
+            <tr>
+                <td>
+                    <div class="square"></div>
+                </td>
+                <td>
+                    <div class="square"></div>
+                </td>
+                <td>
+                    <div class="square"></div>
+                </td>
+                <td>
+                    <div class="square"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="square"></div>
+                </td>
+                <td>
+                    <div class="square"></div>
+                </td>
+                <td>
+                    <div class="square"></div>
+                </td>
+                <td>
+                    <div class="square"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="square"></div>
+                </td>
+                <td>
+                    <div class="square"></div>
+                </td>
+                <td>
+                    <div class="square"></div>
+                </td>
+                <td>
+                    <div class="square"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="square"></div>
+                </td>
+                <td>
+                    <div class="square"></div>
+                </td>
+                <td>
+                    <div class="square"></div>
+                </td>
+                <td>
+                    <div class="square"></div>
+                </td>
+            </tr>
+        </table>
+        <button id="startButton" type="button" onclick="startGame()">СТАРТ</button>        
+        <form name=MyForm>            
+            <input id="displayTime" name=stopwatch size=10 value="00:00:00.00">            
+        </form>
+    </div>
+    <script src="secundomer.js"></script>
+    <script src="task3.js"></script>    
+</body>
+
+</html>
