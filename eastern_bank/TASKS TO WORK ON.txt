@@ -1,0 +1,10 @@
+* Change all img tags to divs with background(url: img/picture.png);
+
+* Make width of containers for links in "menu-links" wider, then narrow down margin-right
+
+* Override class "active" for nav nav-bar li element - let it be underlined
+Or design custom class for showing active tab
+
+* Change hover-effect for links in navbar tabs - something to underline (?)
+
+* Class "top-of-footer" - Change hover-effect. (?) 
