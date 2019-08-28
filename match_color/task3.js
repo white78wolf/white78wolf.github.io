@@ -1,10 +1,10 @@
 let squares = document.getElementsByClassName('square'); // получаем коллекцию игровых элементов из DOM
 let colors = ['red', 'orange', 'yellow', 'green', 'lime', 'lightblue', 'blue', 'violet',
     'red', 'orange', 'yellow', 'green', 'lime', 'lightblue', 'blue', 'violet'
-];                      // базовый набор игровых цветов - 16 шт. из 8 пар повторяющихся
+];                      // базовый набор игровых цветов - 16 шт. из 8 пар повторяющихся;
 let hiddenColors = [];  // цвета, которые будут присвоены случайным образом игровым элементам, 
-                        // но будут до клика скрыты
-let previousColor = ''; // предыдущий цвет для сравнения и "раскраски"
+                        // но будут до клика скрыты;
+let previousColor = ''; // предыдущий цвет для сравнения и "раскраски";
 let previousIndex;      // индекс предыдушего элемента
 
 let countOfPairs = 0;   // количество пар - для отслеживания прогресса игрового раунда
@@ -21,10 +21,10 @@ function startGame() {    // функция на кнопке "старт"
     }
     // поменяем название кнопки "старт", если она была нажата в очередной раз
     if (startPressed) {
-        document.getElementById('startButton').innerHTML = "СТАРТ";
+        document.getElementById('startButton').innerHTML = "START";
         startPressed = false;
     } else {
-        document.getElementById('startButton').innerHTML = "Стоп";
+        document.getElementById('startButton').innerHTML = "STOP";
         startPressed = true;
     }
 
@@ -71,7 +71,7 @@ function showColor(index) {
             announceResult();
             countOfPairs = 0;
 
-            document.getElementById('startButton').innerHTML = "Ещё!";
+            document.getElementById('startButton').innerHTML = "One more!";
             startPressed = false;
         }
 
