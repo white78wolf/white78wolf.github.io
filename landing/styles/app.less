@@ -1,0 +1,44 @@
+.app {
+    padding: 180px 10% 0;
+    background-color: #f7f7f7;
+    height: 700px;
+    display: flex;
+    &__image {
+        width: 523px;
+        background-image: url('images/iphone@2x.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+        margin-top: -80px;
+    }
+    &__content {
+        width: 370px;
+        margin-left: auto;
+    }
+    &__description {
+        color: #8b8b8b;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 18px;
+        margin: 0 0 30px;
+    }
+    &__link {
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        margin-right: 10px;
+        /* hide text */
+        text-indent: -9999px;
+        overflow: hidden;
+        &--appstore {
+            background-image: url('images/appstore@2x.png');
+            width: 112px;
+            height: 39px;
+        }
+        &--googleplay {
+            background-image: url('images/googleplay@2x.png');
+            width: 120px;
+            height: 39px;
+        }
+    }
+}

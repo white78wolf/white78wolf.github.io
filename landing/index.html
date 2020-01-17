@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find your favourite recipes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ДЛЯ ПЕРВОГО ЭКРАНА */
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="images/logo.png" srcset="images/logo.png 1x, images/logo@2x.png 2x" alt="logo" class="logo__img">
+        </a>
+        <n class="menu">
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">log in</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" class="menu__link">sign up</a>
+                </li>
+                <li class="menu__item">
+                    <label for="checkbox-button-menu">&#9776</label>
+                    <input id="checkbox-button-menu" type="checkbox" hidden>
+                    <ul class="button-menu">
+                        <li class="button-menu__item">
+                            <a href="#" class="button-menu__link">Find</a>
+                        </li>
+                        <li class="button-menu__item">
+                            <a href="#" class="button-menu__link">Your</a>
+                        </li>
+                        <li class="button-menu__item">
+                            <a href="#" class="button-menu__link">Favourite</a>
+                        </li>
+                        <li class="button-menu__item">
+                            <a href="#" class="button-menu__link">Recipe</a>
+                        </li>
+                        <li class="button-menu__item">
+                            <a href="#" class="button-menu__link">Contact</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </n>
+    </header>
+    <!-- /.header -->
+
+    <section class="main">
+        <h1 class="main__title">Find your Favourite
+            <span class="main__title-big">recipes</span>
+        </h1>
+        <a href="#app" class="main__button">get started</a>
+        <p class="main__description">OR SEND US YOUR OWN RECIPES AND
+            <a href="#">GET REWARDED!</a>
+        </p>
+    </section>
+    <!-- /.main -->
+
+    <section class="features">
+        <ul class="features__list">
+            <li class="features__item features__item--burger">
+                <h3 class="section-title">get inspired</h3>
+                <p class="features__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa tempora sint in doloribus quasi qui quibusdam
+                    impedit cum molestiae voluptatum minus enim, nihil nesciunt, accusantium exercitationem ipsum asperiores
+                    veniam. Vitae.</p>
+            </li>
+            <li class="features__item features__item--money">
+                <h3 class="section-title">get rewarded</h3>
+                <p class="features__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa tempora sint in doloribus quasi qui quibusdam
+                    impedit cum molestiae voluptatum minus enim, nihil nesciunt, accusantium exercitationem ipsum asperiores
+                    veniam. Vitae.</p>
+            </li>
+            <li class="features__item features__item--man">
+                <h3 class="section-title">get social</h3>
+                <p class="features__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa tempora sint in doloribus quasi qui quibusdam
+                    impedit cum molestiae voluptatum minus enim, nihil nesciunt, accusantium exercitationem ipsum asperiores
+                    veniam. Vitae.</p>
+            </li>
+        </ul>
+    </section>
+    <!-- /.features -->
+
+    <section class="app" id="app">
+        <div class="app__image"></div>
+        <div class="app__content">
+            <h1 class="section-title section-title--left">introducing the fudi app</h1>
+            <p class="app__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic ad error qui eius in quaerat facere incidunt voluptas
+                cum, ab necessitatibus sequi? Totam, repellat eaque rerum eos reprehenderit praesentium nostrum.</p>
+            <p class="app__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic ad error qui eius in quaerat facere incidunt voluptas
+                cum, ab necessitatibus sequi? Totam, repellat eaque rerum eos reprehenderit praesentium nostrum.</p>
+            <p class="app__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic ad error qui eius in quaerat facere incidunt voluptas
+                cum, ab necessitatibus sequi? Totam, repellat eaque rerum eos reprehenderit praesentium nostrum.</p>
+
+            <p class="app__description">
+                <a class="app__link app__link--appstore" href="#">app store</a>
+                <a class="app__link app__link--googleplay" href="#">google play</a>
+            </p>
+        </div>
+        <!-- /. app__content -->
+    </section>
+    <!-- /. app -->
+
+    <section class="review">
+        <img src="images/avatar@2x.png" alt="avatar" class="review__avatar">
+        <p class="review__text">
+            I am so happy because I found this recipe, and it just made my life easier.
+            <br> Thanks so much for sharing!
+        </p>
+        <div class="review__author">
+            ~ Andy Tsepkoff, West Siberia ~
+        </div>
+
+        <nav class="review-control">
+            <span class="review-control__item review-control__item--active"></span>
+            <span class="review-control__item"></span>
+            <span class="review-control__item"></span>
+        </nav>
+        <!-- /.review-control -->
+    </section>
+    <!-- /.review -->
+
+    <section class="meals">
+        <h1 class="section-title section-title--meals">browse by cuisines</h1>
+        <ul class="meals__list">
+            <li class="meals__item" id="italian">
+                <div class="meals__content">
+                    <div class="meals__counter">327 recipes</div>
+                    <h2 class="meals__title">italian</h2>
+                </div>
+            </li>
+            <li class="meals__item" id="indian">
+                <div class="meals__content">
+                    <div class="meals__counter">856 recipes</div>
+                    <h2 class="meals__title">indian</h2>
+                </div>
+            </li>
+            <li class="meals__item" id="french">
+                <div class="meals__content">
+                    <div class="meals__counter">27 recipes</div>
+                    <h2 class="meals__title">french</h2>
+                </div>
+            </li>
+            <li class="meals__item" id="steakhouse">
+                <div class="meals__content">
+                    <div class="meals__counter">174 recipes</div>
+                    <h2 class="meals__title">steakhouse</h2>
+                </div>
+            </li>
+            <li class="meals__item" id="seafood">
+                <div class="meals__content">
+                    <div class="meals__counter">731 recipes</div>
+                    <h2 class="meals__title">seafood</h2>
+                </div>
+            </li>
+            <li class="meals__item" id="sushi">
+                <div class="meals__content">
+                    <div class="meals__counter">237 recipes</div>
+                    <h2 class="meals__title">sushi</h2>
+                </div>
+            </li>
+            <li class="meals__item" id="mexican">
+                <div class="meals__content">
+                    <div class="meals__counter">529 recipes</div>
+                    <h2 class="meals__title">mexican</h2>
+                </div>
+            </li>
+            <li class="meals__item" id="chinese">
+                <div class="meals__content">
+                    <div class="meals__counter">145 recipes</div>
+                    <h2 class="meals__title">chinese</h2>
+                </div>
+            </li>
+            <li class="meals__item" id="russian">
+                <div class="meals__content">
+                    <div class="meals__counter">343 recipes</div>
+                    <h2 class="meals__title">russian</h2>
+                </div>
+            </li>
+            <li class="meals__item" id="american">
+                <div class="meals__content">
+                    <div class="meals__counter">14 recipes</div>
+                    <h2 class="meals__title">american</h2>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!-- /.meals -->
+
+    <ul class="recipes-counter">
+        <li class="recipes-counter__item">
+            <h3 class="recipes-counter__title">23,567</h3>
+            <p class="recipes-counter__description">Recipes Available</p>
+        </li>
+        <li class="recipes-counter__item">
+            <h3 class="recipes-counter__title">431,729</h3>
+            <p class="recipes-counter__description">Active Users</p>
+        </li>
+        <li class="recipes-counter__item">
+            <h3 class="recipes-counter__title">892,173</h3>
+            <p class="recipes-counter__description">Positive Reviews</p>
+        </li>
+        <li class="recipes-counter__item">
+            <h3 class="recipes-counter__title">56,581</h3>
+            <p class="recipes-counter__description">Photos & Videos</p>
+        </li>
+        <li class="recipes-counter__item">
+            <h3 class="recipes-counter__title">3,182</h3>
+            <p class="recipes-counter__description">Spices & Herbs</p>
+        </li>
+    </ul>
+    <!-- /.recipes-counter -->
+
+    <footer class="footer">
+        <p class="footer__copyright">©2014 Fudi. All Rights Reserved.</p>
+        <p class="footer__design">Design by:
+            <a class="footer__link" href="//www.bekades.com">www.bekades.com</a>
+        </p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
