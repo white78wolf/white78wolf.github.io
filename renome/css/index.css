@@ -1,0 +1,151 @@
+/* The Glyphicons are from
+http://www.glyphicons.com/ */
+
+/*************************************
+**************** HEADER **************
+**************************************/
+
+.navbar-default .navbar-text {
+    margin-left: 4em;
+    margin-top: 1em;
+    font-size: 1.6em;
+}
+
+.navbar-default .navbar-text a.navbar-link {
+    color: #444;
+}
+
+.navbar-btn {
+    margin: 1.5em 1.2em 0 1.2em;
+    color: #eee;
+}
+
+/*************************************
+************* CALL-TO-ACTION *********
+**************************************/
+
+.jumbotron-call-to-action {
+    background-image: url(../img/search.jpg);
+    color: #222;
+
+}
+
+/*************************************
+*************** THUMBNAILS ***********
+**************************************/
+
+.jumbotron p {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.thumbnail {
+    border: 0em;
+    border-radius: 50%;
+}
+
+.thumbnail-p {
+    text-align: center;
+}
+
+.jumbotron-background {
+    background-image: url(../img/we-know.jpg);
+}
+
+/*************************************
+************* INPUT AND CHECK ********
+**************************************/
+
+.well-lg {
+    text-align: center;
+    font-size: 18pt;
+}
+
+.input-group {
+    margin-bottom: 1.5em;
+}
+
+.input-group input {
+    font-size: 18pt;
+    height: 2em;
+}
+
+.input-group .input-group-btn button {
+    font-size: 18pt;
+}
+
+/*************************************
+******* WE-KNOW (USED GRID CSS) ******
+**************************************/
+
+.we-know {
+    font-size: 18pt;
+    width: auto;
+    height: 16em;
+    background-image: url(../img/we-know.jpg);
+    color: #333;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "header header""main sidebar";
+    grid-gap: 1em;
+}
+
+header {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    grid-area: header;
+}
+
+.main {
+    grid-area: main;
+    margin-left: 3em;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    margin-left: 2.5em;
+}
+
+/*************************************
+**************** FOOTER **************
+**************************************/
+
+.navbar-bottom {
+    font-size: 18pt;
+    margin: 1em 0 0 0;
+    /*Had tried to stick footer down (see below)*/
+    position: relative; 
+    bottom: -51px;
+}
+
+.txt-railway {
+    margin-bottom: 1em;
+}
+
+/*************************************
+************* MEDIA QUERIES **********
+**************************************/
+
+@media screen and (max-width: 960px) {
+    .we-know {
+        font-size: 12pt;
+        height: auto;
+    }
+
+    .we-know img {
+        height: 16px;
+        width: 16px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .we-know {
+        font-size: 10pt;
+        height: auto;
+    }
+
+    .navbar-text a {
+        display: block;
+    }
+}
