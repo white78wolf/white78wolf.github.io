@@ -337,7 +337,7 @@ a:hover {
   font-size: 15px;
   line-height: 30px;
   font-style: italic;
-  letter-spacing: .7px;
+  letter-spacing: 0.7px;
 }
 .meals__title {
   font-size: 24px;
@@ -353,12 +353,24 @@ a:hover {
   padding: 0 10%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 353px) {
+  .recipes-counter {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .recipes-counter__title {
   font-size: 36px;
   font-weight: 700;
   line-height: 30px;
   margin: 0 0 12px;
+}
+@media (max-width: 830px) {
+  .recipes-counter__title {
+    margin: 0 12px 12px 0;
+  }
 }
 .recipes-counter__description {
   font-size: 16px;
