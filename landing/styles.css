@@ -139,6 +139,11 @@ a:hover {
   font-style: normal;
   font-family: 'Lato', sans-serif;
 }
+@media (max-width: 414px) {
+  .main__title-big {
+    font-size: 50px;
+  }
+}
 .main__button {
   color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
@@ -152,6 +157,11 @@ a:hover {
   justify-content: center;
   margin-bottom: 40px;
 }
+@media (max-width: 305px) {
+  .main__button {
+    width: 90%;
+  }
+}
 .main__description {
   text-shadow: -1px 1px 40px rgba(1, 1, 1, 0.55);
   font-size: 14px;
@@ -160,6 +170,11 @@ a:hover {
   font-weight: 400;
   letter-spacing: 0.7px;
   font-weight: 700;
+}
+@media (max-width: 416px) {
+  .main__description {
+    text-align: center;
+  }
 }
 .features {
   padding: 10%;
