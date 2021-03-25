@@ -1,19 +1,41 @@
 .app {
-    padding: 180px 10% 0;
+    padding: 0 10% 0;
     background-color: #f7f7f7;
-    height: 700px;
+    height: auto;
     display: flex;
+    justify-content: space-between;
+    @media (max-width: 767px) {
+        padding: 0 10% 0;
+        flex-direction: column;
+    }
+
     &__image {
-        width: 523px;
+        width: 60%;
         background-image: url('images/iphone@2x.png');
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: top;
+        background-origin: content-box;
+        background-position: bottom;
         margin-top: -80px;
+        @media (max-width: 767px){
+            height: 400px;
+            width: 100%;
+            background-position: center;
+            margin-top: -30px;
+        }
     }
     &__content {
-        width: 370px;
+        width: 35%;
         margin-left: auto;
+        @media (max-width: 963px){
+            font-size: 0.50em;
+        }
+        @media (max-width: 767px){
+            width: 100%;
+        }
+        .section-title {
+            margin-top: 20px;
+        }
     }
     &__description {
         color: #8b8b8b;
@@ -21,18 +43,21 @@
         font-weight: 300;
         line-height: 18px;
         margin: 0 0 30px;
+        &_links {
+            text-align: center;
+        }
     }
+
     &__link {
         background-repeat: no-repeat;
         background-size: cover;
         display: inline-block;
-        margin-right: 10px;
-        /* hide text */
-        text-indent: -9999px;
+        margin: 0 10px 10px 0;
+        text-indent: -9999px; /* hide text */
         overflow: hidden;
         &--appstore {
             background-image: url('images/appstore@2x.png');
-            width: 112px;
+            width: 120px;
             height: 39px;
         }
         &--googleplay {

@@ -205,22 +205,51 @@ a:hover {
   color: #8b8b8b;
 }
 .app {
-  padding: 180px 10% 0;
+  padding: 0 10% 0;
   background-color: #f7f7f7;
-  height: 700px;
+  height: auto;
   display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 767px) {
+  .app {
+    padding: 0 10% 0;
+    flex-direction: column;
+  }
 }
 .app__image {
-  width: 523px;
+  width: 60%;
   background-image: url('images/iphone@2x.png');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: top;
+  background-origin: content-box;
+  background-position: bottom;
   margin-top: -80px;
 }
+@media (max-width: 767px) {
+  .app__image {
+    height: 400px;
+    width: 100%;
+    background-position: center;
+    margin-top: -30px;
+  }
+}
 .app__content {
-  width: 370px;
+  width: 35%;
   margin-left: auto;
+}
+@media (max-width: 963px) {
+  .app__content {
+    font-size: 0.5em;
+  }
+}
+@media (max-width: 767px) {
+  .app__content {
+    width: 100%;
+  }
+}
+.app__content .section-title {
+  margin-top: 20px;
 }
 .app__description {
   color: #8b8b8b;
@@ -229,18 +258,21 @@ a:hover {
   line-height: 18px;
   margin: 0 0 30px;
 }
+.app__description_links {
+  text-align: center;
+}
 .app__link {
   background-repeat: no-repeat;
   background-size: cover;
   display: inline-block;
-  margin-right: 10px;
-  /* hide text */
+  margin: 0 10px 10px 0;
   text-indent: -9999px;
+  /* hide text */
   overflow: hidden;
 }
 .app__link--appstore {
   background-image: url('images/appstore@2x.png');
-  width: 112px;
+  width: 120px;
   height: 39px;
 }
 .app__link--googleplay {
