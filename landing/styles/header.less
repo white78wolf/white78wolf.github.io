@@ -2,13 +2,19 @@
 .header {
     position: absolute;
     width: 100%;
-    display: flex;
     padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 451px) {
+        padding: 0;
+    }
 }
+
 .logo {
     width: 129px;
     height: 108px;
 }
+
 .logo__img {
     width: 100%;
 }

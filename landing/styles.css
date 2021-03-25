@@ -18,8 +18,14 @@ a:hover {
 .header {
   position: absolute;
   width: 100%;
-  display: flex;
   padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 451px) {
+  .header {
+    padding: 0;
+  }
 }
 .logo {
   width: 129px;
