@@ -114,9 +114,20 @@ a:hover {
   display: block;
   background-color: rgba(255, 255, 255, 0.4);
 }
+@media (max-width: 830px) {
+  .button-menu__link {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+  }
+}
 .button-menu__link:hover {
   background-color: #eee;
   color: #333;
+}
+@media (max-width: 830px) {
+  .button-menu__link:hover {
+    background-color: #ddd;
+  }
 }
 #checkbox-button-menu:checked + .button-menu {
   display: block;
