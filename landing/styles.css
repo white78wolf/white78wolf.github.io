@@ -295,6 +295,11 @@ a:hover {
   color: #fff;
   position: relative;
 }
+@media (max-width: 767px) {
+  .meals__item {
+    width: 50%;
+  }
+}
 .meals #italian {
   background-image: url('images/meals/italian.jpg');
 }
@@ -344,6 +349,11 @@ a:hover {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
+}
+@media (max-width: 320px) {
+  .meals__title {
+    font-size: 22px;
+  }
 }
 .recipes-counter {
   color: #000;
