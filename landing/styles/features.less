@@ -1,5 +1,5 @@
 .features {
-    padding: 100px 10%;
+    padding: 10%;
 
     &__list {
         margin: 0;
@@ -7,12 +7,19 @@
         display: flex;
         justify-content: space-between;
         list-style: none;
+        @media (max-width: 767px) {
+            /* padding: 0 10% 0; */
+            flex-direction: column;
+        }
     }
 
     &__item {
-        width: 360px;
-        padding: 0 10px;
+        width: 30%;
+        padding: 10px;
         text-align: center;
+        @media (max-width: 767px) {
+            width: 100%;
+        }
 
         &:before {
             content: "";
@@ -23,14 +30,14 @@
             background-repeat: no-repeat;
             background-size: 50%;
             background-position: center;
-            display: inline-block;            
+            display: inline-block;
             margin-bottom: 20px;
         }
 
         &--burger::before {
             background-image: url("images/burger@2x.png");
         }
-        
+
         &--money::before{
             background-image: url("images/money@2x.png");
         }

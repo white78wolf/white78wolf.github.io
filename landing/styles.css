@@ -162,7 +162,7 @@ a:hover {
   font-weight: 700;
 }
 .features {
-  padding: 100px 10%;
+  padding: 10%;
 }
 .features__list {
   margin: 0;
@@ -171,10 +171,21 @@ a:hover {
   justify-content: space-between;
   list-style: none;
 }
+@media (max-width: 767px) {
+  .features__list {
+    /* padding: 0 10% 0; */
+    flex-direction: column;
+  }
+}
 .features__item {
-  width: 360px;
-  padding: 0 10px;
+  width: 30%;
+  padding: 10px;
   text-align: center;
+}
+@media (max-width: 767px) {
+  .features__item {
+    width: 100%;
+  }
 }
 .features__item:before {
   content: "";
