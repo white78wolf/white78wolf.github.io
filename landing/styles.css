@@ -73,6 +73,38 @@ a:hover {
   background-color: #fff;
 }
 /* MENU */
+.menu {
+  /* .dropdown-list:hover .button-menu li:first-of-type {
+        -webkit-animation: menu5 0.3s ease-in-out forwards;
+                animation: menu5 0.3s ease-in-out forwards;
+        -webkit-animation-delay: 0.3s;
+                animation-delay: 0.3s;
+    }
+
+    @-webkit-keyframes menu5 {
+        0% {
+          opacity: 0;
+          transform: rotateX(-90deg);
+        }
+
+        100% {
+          opacity: 1;
+          transform: rotateX(0);
+        }
+    }
+
+    @keyframes menu5 {
+        0% {
+          opacity: 0;
+          transform: rotateX(-90deg);
+        }
+
+        100% {
+          opacity: 1;
+          transform: rotateX(0);
+        }
+    } */
+}
 .menu__list {
   display: flex;
   align-items: center;
@@ -96,12 +128,17 @@ a:hover {
     font-size: 250%;
   }
 }
+.menu .drop:hover > .button-menu {
+  /* display: block; */
+  opacity: 1;
+}
 .menu__link {
   text-transform: uppercase;
 }
 /*BUTTON-MENU*/
 .button-menu {
-  display: none;
+  /* display: none; */
+  opacity: 0;
   list-style: none;
   margin: 0;
   padding: 10px 0 0;
