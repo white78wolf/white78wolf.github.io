@@ -15,6 +15,7 @@ body {
 
 body {
     font-family: Roboto-Light, sans-serif;
+    min-height: 100%;    
 }
 
 .container {
@@ -64,6 +65,11 @@ body {
 
 .navbar-collapse {
     padding-right: 0;
+}
+
+.navbar-fixed-bottom {
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
 }
 
 #diploma_link {
